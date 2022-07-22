@@ -1,16 +1,3 @@
-// doomrpg_data
-// Copyright(C) 2020-2022 John D. Corrado
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -192,7 +179,6 @@ bspmapex_t *LoadBspMapEx(const char *filename)
 	{
 		map = (bspmapex_t *)malloc(sizeof(bspmapex_t));
 		fread(&map->header, sizeof(bspheaderex_t), 1, fp);
-		fread(&map->nodeCount, sizeof(uint16_t), 1, fp);
 		fread(&map->nodeCount, sizeof(uint16_t), 1, fp);
 		map->nodes = (bspnode_t *)malloc(sizeof(bspnode_t) * map->nodeCount);
 		fread(map->nodes, sizeof(bspnode_t), map->nodeCount, fp);

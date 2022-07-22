@@ -22,7 +22,7 @@ enum class DoomRPGUtilOption
 	ExportGraphics,
 	ExportMappings,
 	ExportEntities,
-	ExportEntitiesEx,
+	ExportEntitiesEx
 };
 
 void ViewMap(int argc, char *argv[]);

@@ -1,16 +1,3 @@
-// doomrpg_data
-// Copyright(C) 2020-2022 John D. Corrado
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
 #ifndef __DOOMRPG_DATA_H__
 #define __DOOMRPG_DATA_H__
 
@@ -136,7 +123,7 @@ typedef struct
 {
 	color_t floorColor;
 	color_t ceilingColor;
-	uint8_t unused[3];
+	color_t introColor;
 	uint8_t levelId;
 	uint16_t playerPosition;
 	uint8_t playerAngle;
@@ -147,11 +134,13 @@ typedef struct
 	uint8_t name[16];
 	color_t floorColor;
 	color_t ceilingColor;
-	uint16_t unknown;
-	uint8_t unused[3];
+	uint8_t floorTexture;
+	uint8_t ceilingTexture;
+	color_t introColor;
 	uint8_t levelId;
 	uint16_t playerPosition;
 	uint8_t playerAngle;
+	uint16_t cameraPosition;
 } bspheaderex_t;
 
 typedef struct
