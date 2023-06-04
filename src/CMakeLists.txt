@@ -15,4 +15,4 @@ set(SOURCE_FILES
 				ViewMapOptions.h)
 
 add_executable(drpgu ${SOURCE_FILES})
-target_link_libraries(drpgu ${SDL2_LIBRARIES})
+target_link_libraries(drpgu SDL2::SDL2 SDL2::SDL2main)
